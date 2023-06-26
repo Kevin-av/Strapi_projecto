@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cars",
+  "info": {
+    "singularName": "car",
+    "pluralName": "cars",
+    "displayName": "Car"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Placa": {
+      "type": "string",
+      "required": true
+    },
+    "Color": {
+      "type": "string",
+      "required": true
+    },
+    "Marca": {
+      "type": "string",
+      "required": true
+    },
+    "Carro": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "driver": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::driver.driver",
+      "inversedBy": "cars"
+    }
+  }
+}

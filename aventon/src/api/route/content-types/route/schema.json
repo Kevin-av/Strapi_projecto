@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "routes",
+  "info": {
+    "singularName": "route",
+    "pluralName": "routes",
+    "displayName": "Route"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Hora": {
+      "type": "time",
+      "required": true,
+      "default": "06:50"
+    },
+    "Destino": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

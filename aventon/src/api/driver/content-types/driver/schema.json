@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drivers",
+  "info": {
+    "singularName": "driver",
+    "pluralName": "drivers",
+    "displayName": "Driver",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "required": true
+    },
+    "Apellido": {
+      "type": "string",
+      "required": true
+    },
+    "Licencia": {
+      "type": "biginteger",
+      "required": true
+    },
+    "Clave": {
+      "type": "password",
+      "required": true
+    },
+    "Correo": {
+      "type": "email",
+      "required": true
+    },
+    "Vehiculo": {
+      "type": "string",
+      "required": true
+    },
+    "Edad": {
+      "type": "integer",
+      "required": true,
+      "default": 22
+    },
+    "Foto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Cedula": {
+      "type": "biginteger"
+    },
+    "cars": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::car.car",
+      "mappedBy": "driver"
+    },
+    "Aceptar": {
+      "type": "boolean",
+      "required": true
+    },
+    "route": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::route.route"
+    },
+    "passanger": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::passanger.passanger",
+      "mappedBy": "driver"
+    }
+  }
+}

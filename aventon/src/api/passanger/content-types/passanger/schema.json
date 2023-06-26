@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "passangers",
+  "info": {
+    "singularName": "passanger",
+    "pluralName": "passangers",
+    "displayName": "Passanger",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "required": true
+    },
+    "Apellido": {
+      "type": "string",
+      "required": true
+    },
+    "Foto": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Cedula": {
+      "type": "biginteger",
+      "required": true
+    },
+    "Edad": {
+      "type": "integer",
+      "default": 18,
+      "required": true
+    },
+    "Aceptar": {
+      "type": "boolean",
+      "required": true
+    },
+    "Clave": {
+      "type": "password",
+      "required": true
+    },
+    "Correo": {
+      "type": "email",
+      "required": true
+    },
+    "driver": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::driver.driver",
+      "inversedBy": "passanger"
+    },
+    "route": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::route.route"
+    },
+    "car": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::car.car"
+    },
+    "trusts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trust.trust"
+    }
+  }
+}

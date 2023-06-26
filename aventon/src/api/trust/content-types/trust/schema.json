@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trusts",
+  "info": {
+    "singularName": "trust",
+    "pluralName": "trusts",
+    "displayName": "Trust"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Confianza": {
+      "type": "enumeration",
+      "enum": [
+        "Responsabilidad",
+        "Puntualidad",
+        "Confiabilidad",
+        "Amabilidad"
+      ]
+    }
+  }
+}
